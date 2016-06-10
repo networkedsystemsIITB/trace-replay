@@ -17,7 +17,7 @@
  *
  * Author: Prakash Agrawal <prakashagr@cse.iitb.ac.in, prakash9752@gmail.com>
  *         Prof. Mythili Vutukuru <mythili@cse.iitb.ac.in>
- * Refrence: https://goo.gl/Z4ZW2K
+ * Reference: https://goo.gl/Z4ZW2K
  */
 
 #include "trace-replay-server.h"
@@ -269,7 +269,7 @@ TraceReplayServer::SendPacket (Ptr<Socket> socket, TraceReplayPacket packet)
           // update the number of packets to send in next run
           ++m_numRepIt;
         }
-      // go to recieve mode
+      // go to receive mode
       socket->SetRecvCallback (MakeCallback (&TraceReplayServer::ReceivePacket, this));
     }
 }
@@ -301,7 +301,7 @@ TraceReplayServer::ScheduleTx (Ptr<Socket> socket)
       // No more packet to send, update expected number total bytes to be received
       m_totExpByte = *(m_expByteIt++);
       m_totRecByte = 0;
-      // go to recieve mode
+      // go to receive mode
       m_socket->SetRecvCallback (MakeCallback (&TraceReplayServer::ReceivePacket, this));
     }
 }
@@ -323,7 +323,7 @@ TraceReplayServer::ReceivePacket (Ptr<Socket> socket)
           m_totByteCount += packet->GetSize ();
         }
     }
-  // keep recieving packet
+  // keep receiving packet
   if (m_totRecByte < m_totExpByte)
     {
       socket->SetRecvCallback (MakeCallback (&TraceReplayServer::ReceivePacket, this));

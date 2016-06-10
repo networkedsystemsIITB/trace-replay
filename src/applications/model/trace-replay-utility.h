@@ -17,7 +17,7 @@
  *
  * Author: Prakash Agrawal <prakashagr@cse.iitb.ac.in, prakash9752@gmail.com>
  *         Prof. Mythili Vutukuru <mythili@cse.iitb.ac.in>
- * Refrence: https://goo.gl/Z4ZW2K
+ * Reference: https://goo.gl/Z4ZW2K
  */
 
 #ifndef TRACE_REPLAY_PACKET_H
@@ -120,7 +120,7 @@ public:
    * \param portClient Port number of client
    * \param portServer Port number of server
    *
-   * \returns total number of bytes seen (sent+recieved) by the connection in the pcap
+   * \returns total number of bytes seen (sent+received) by the connection in the pcap
    */
   uint32_t GetByteCount (uint16_t portClient, uint16_t portServer);
 

@@ -17,7 +17,7 @@
  *
  * Author: Prakash Agrawal <prakashagr@cse.iitb.ac.in, prakash9752@gmail.com>
  *         Prof. Mythili Vutukuru <mythili@cse.iitb.ac.in>
- * Refrence: https://goo.gl/Z4ZW2K
+ * Reference: https://goo.gl/Z4ZW2K
  */
 
 #include "trace-replay-utility.h"
