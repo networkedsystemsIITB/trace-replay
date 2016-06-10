@@ -17,7 +17,7 @@
  *
  * Author: Prakash Agrawal <prakashagr@cse.iitb.ac.in, prakash9752@gmail.com>
  *         Prof. Mythili Vutukuru <mythili@cse.iitb.ac.in>
- * Refrence: https://goo.gl/Z4ZW2K
+ * Reference: https://goo.gl/Z4ZW2K
  */
 
 #include "trace-replay-client.h"
@@ -253,14 +253,14 @@ TraceReplayClient::SendPacket (TraceReplayPacket packet)
       // update expected number of total bytes to be received
       m_totExpByte = *(m_expByteIt++);
       m_totRecByte = 0;
-      // No more packets to recieve. Close connection
+      // No more packets to receive. Close connection
       if (m_totExpByte == 0)
         {
           m_socket->Close ();
           m_connected = false;
           return;
         }
-      // go to recieve mode
+      // go to receive mode
       m_socket->SetRecvCallback (MakeCallback (&TraceReplayClient::ReceivePacket, this));
     }
 }
@@ -294,7 +294,7 @@ TraceReplayClient::ScheduleTx (void)
       m_totRecByte = 0;
       if (m_totExpByte == 0)
         {
-          // No more packet to send or recieve
+          // No more packet to send or receive
           m_socket->Close ();
           m_connected = false;
         }
@@ -325,7 +325,7 @@ TraceReplayClient::ReceivePacket (Ptr<Socket> socket)
     }
   if (m_totRecByte < m_totExpByte)
     {
-      // keep recieving packet
+      // keep receiving packet
       m_socket->SetRecvCallback (MakeCallback (&TraceReplayClient::ReceivePacket, this));
     }
   else if (m_numReqIt != m_numReq.end () && ++m_numReqIt != m_numReq.end ())
@@ -335,7 +335,7 @@ TraceReplayClient::ReceivePacket (Ptr<Socket> socket)
     }
   else
     {
-      // No more packet to send or recieve
+      // No more packet to send or receive
       StopApplication ();
     }
 }
