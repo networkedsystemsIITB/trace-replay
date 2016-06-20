@@ -40,3 +40,14 @@ $ ./waf --run "scratch/trace-replay-example --pcapPath=example/trace-replay/trac
     
     
    [PlDb]: <https://goo.gl/Z4ZW2K>
+   
+
+######Authors
+
+- Prakash Agrawal, Master's student (2013-2016), Dept. of Computer Science and Engineering, IIT Bombay.
+- Prof. Mythili Vutukuru, Dept. of Computer Science and Engineering, IIT Bombay.
+
+######Contact
+
+- Prakash Agrawal, prakash9752@gmail.com
+- Prof. Mythili Vutukuru, mythili@cse.iitb.ac.in
