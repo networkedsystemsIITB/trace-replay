@@ -13,6 +13,8 @@ The source code for TraceReplay is located in ``src/applications/model`` and con
  - trace-replay-utility.h and
  - trace-replay-utility.cc
 
+ApTraceReplay is an application layer model to replay a MAC layer trace. It is currently under developement.
+
 Helpers
 *******
 The helper code for TraceReplay is located in ``src/applications/helper`` and consists of the following 2 files:
@@ -22,7 +24,7 @@ The helper code for TraceReplay is located in ``src/applications/helper`` and co
 
 Examples
 ********
-The example for TraceReplay can be found at ``examples/trace-replay/trace-replay-example.cc``
+The example for TraceReplay can be found at ``src/applications/examples/trace-replay-example.cc``
 ### Installation:
 To add TraceReplay to ns3 source code:
 
@@ -35,7 +37,8 @@ $ ./waf
 ```
 To run TraceReplay example run following command:
 ```sh
-$ ./waf --run "scratch/trace-replay-example --pcapPath=example/trace-replay/trace-replay-sample.pcap --nWifi=1"
+Copy src/applications/examples/trace-replay-example.cc to scratch folder.
+$ ./waf --run "scratch/trace-replay-example --pcapPath=src/applications/examples/trace-replay-sample.pcap --nWifi=1"
 ```
     
     
